@@ -37,7 +37,7 @@
     color: red;
  }
 
- :host >>> ngx-skeleton-loader .loader{
+ :host ::ng-deep ngx-skeleton-loader .loader{
     height: 30px;
     top: 140px;
     left: 200px;

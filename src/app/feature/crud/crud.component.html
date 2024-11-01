@@ -1,0 +1,167 @@
+<!-- <style>
+  .skeleton-loader[_ngcontent-ng-c3247267950] {
+    top: 70% !important;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+    background: rgb(239,241,246) no-repeat;
+    border-radius: 4px;
+    width: 101px;
+    height: 20px;
+    display: inline-block;
+    margin-bottom: 10px;
+    will-change: transform;
+}
+.skeleton-loader[_ngcontent-ng-c3247267950] {
+    top: 50% !important;
+    /* margin: 5px; */
+    /* -webkit-user-select: none; */
+    /* user-select: none; */
+    /* cursor: wait; */
+}
+</style> -->
+<div class="container">
+  <div class="header">
+    <mat-toolbar>
+      <span>Crud Application</span>
+      <span class="example-spacer"></span>
+      <button class="mat-raised-button" (click)="AddUserFormDialog()">
+        ADD EMPLOYEE
+      </button>
+    </mat-toolbar>
+  </div>
+  <div class="content">
+    <mat-form-field class="filter">
+      <mat-label>Filter</mat-label>
+      <input
+        matInput
+        (keyup)="applyFilter($event)"
+        placeholder="Ex. john"
+        #input
+      />
+    </mat-form-field>
+    <div class="row">
+      <div class="col-sm-9 col-lg-9 col-xl-9 col-xxl-9">
+        <div class="mat-elevation-z8">
+          <table mat-table [dataSource]="dataSource" matSort>
+            <!-- ID Column -->
+            <ng-container matColumnDef="id">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>ID</th>
+              <td mat-cell *matCellDef="let row">{{ row.id }}</td>
+            </ng-container>
+    
+            <!-- First Name Column -->
+            <ng-container matColumnDef="firstname">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>First Name</th>
+              <td mat-cell *matCellDef="let row">{{ row.firstname }}</td>
+            </ng-container>
+    
+            <!-- Last Name Column -->
+            <ng-container matColumnDef="lastname" class="alert alert-danger">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>Last Name</th>
+              <td mat-cell *matCellDef="let row">{{ row.lastname }}</td>
+            </ng-container>
+    
+            <ng-container matColumnDef="email">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>Email</th>
+              <td mat-cell *matCellDef="let row">{{ row.email }}</td>
+            </ng-container>
+    
+            <ng-container matColumnDef="dob">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>D O B</th>
+              <td mat-cell *matCellDef="let row">{{ row.dob | date }}</td>
+            </ng-container>
+    
+            <ng-container matColumnDef="gender">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>Gender</th>
+              <td mat-cell *matCellDef="let row">{{ row.gender }}</td>
+            </ng-container>
+    
+            <ng-container matColumnDef="education">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>Education</th>
+              <td mat-cell *matCellDef="let row">{{ row.education }}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="country">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>Country</th>
+              <td mat-cell *matCellDef="let row">{{ row.country }}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="state">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>State</th>
+              <td mat-cell *matCellDef="let row">{{ row.state }}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="city">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>City</th>
+              <td mat-cell *matCellDef="let row">{{ row.city }}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="company">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>Company</th>
+              <td mat-cell *matCellDef="let row">{{ row.company }}</td>
+            </ng-container>
+    
+            <ng-container matColumnDef="experience">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>Experience</th>
+              <td mat-cell *matCellDef="let row">{{ row.experience }}</td>
+            </ng-container>
+    
+            <ng-container matColumnDef="package">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>Package</th>
+              <td mat-cell *matCellDef="let row">
+                {{ row.package | currency : "INR" }}L
+              </td>
+            </ng-container>
+    
+            <div class="icon">
+              <ng-container matColumnDef="action">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header>Action</th>
+                <td mat-cell *matCellDef="let row">
+                  <button mat-icon-button class="edit" (click)="updateEdit(row)">
+                    <mat-icon>edit</mat-icon>
+                  </button>
+                  <button
+                    mat-icon-button
+                    class="delete"
+                    (click)="deleteEmp(row.id)"
+                  >
+                    <mat-icon>delete</mat-icon>
+                  </button>
+                </td>
+              </ng-container>
+            </div>
+    
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns"
+            (click)="selectedRow(row)" tabindex="1"></tr>
+    
+            <!-- Row shown when there is no matching data. -->
+            <tr class="mat-row" *matNoDataRow>
+              <td class="mat-cell" colspan="4">
+                No data matching the filter "{{ input.value }}"
+              </td>
+            </tr>
+          </table>
+    
+          <mat-paginator
+            [pageSizeOptions]="[5, 10, 25, 100]"
+            aria-label="Select page of users"
+          ></mat-paginator>
+        </div>
+      </div>
+
+      <div class="col-sm-3 col-lg-3 col-xl-3 col-xxl-3" style="background-color: #e6f7ff;">
+        <app-display [userData]="data"></app-display>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+
+<ngx-skeleton-loader
+  count="{{ totalCount }}"
+  appearance="line"
+  *ngIf="loader">
+</ngx-skeleton-loader>

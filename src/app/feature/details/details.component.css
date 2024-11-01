@@ -1,0 +1,21 @@
+
+table {
+    width: 100%;
+  }
+  .table-container {
+    height: 300px;
+    max-width: 100%;
+    overflow: auto;
+  }
+  .table-row:focus {
+    background:rgb(221, 221, 233);
+    border: 2px solid black;
+  }
+  .action{
+    margin-left: 800px;
+  }
+  .description{
+    margin-top: 120px;
+  }
+
+    

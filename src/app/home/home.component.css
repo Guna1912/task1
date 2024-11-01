@@ -1,0 +1,44 @@
+.demo{
+    position: relative;
+    top: 500px;
+}
+
+.right{
+    background-color: darkgray;
+    border: none;
+    padding: 7px;
+    border-radius: 2px;
+    box-shadow: 1px 2px 3px;
+    position: absolute;
+    top: 70px;
+    left: 350px;
+    cursor: pointer;
+}
+
+table{
+    width: 100%;
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+td,th{
+    padding: 10px 20px;
+}
+
+.mobiles{
+    position: absolute;
+    top: 550px;
+}
+
+.mobile{
+    position: absolute;
+    top: 500px;
+}
+.button{
+    position: relative;
+   margin-top: 90px;
+   padding: 7px;
+   color: white;
+   background-color: darkblue;
+   border-radius: 3px;
+}

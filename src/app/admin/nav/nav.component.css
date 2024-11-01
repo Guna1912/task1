@@ -1,0 +1,20 @@
+.demo{
+    position: absolute;
+    top: 50px;
+    display: flex;
+    flex-direction: row;
+    gap:20px;
+    background-color: brown;
+    list-style-type: none;
+    padding: 9px;
+}
+
+.demo li a{
+    text-decoration: none;
+    color: white;
+}
+input{
+    position: absolute;
+    top: 200px;
+    padding: 8px;
+}

@@ -1,0 +1,6 @@
+
+<ul class="demo">
+    <li *ngFor = "let x of course">
+        <a [routerLink]="['/courses/course',x.id,x.name]" routerLinkActive="active">{{x.id}}.{{x.name}}</a>
+    </li>
+</ul>

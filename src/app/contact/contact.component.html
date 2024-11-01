@@ -1,0 +1,60 @@
+<h1 *ngIf="!totalData; then sample; else nodata" class="template"></h1>
+
+<ng-template #nodata class="template" >
+    {{totalData}}
+</ng-template>
+
+<ng-template #sample class="template">
+ loading...
+</ng-template>
+
+<div *ngFor = "let data of info" class="demo">
+ {{data.name}}
+ {{data.mail_id}}
+ {{data.mobile_no}}
+</div><br><br><br>
+
+
+<!-- <button (click)="before()" class="left">Previous</button>
+<button (click)="after()" class="right">Next</button> -->
+
+<button (click)="load()" class="button">click</button>
+
+<p  class="para">{{data}}</p>
+
+
+<form [formGroup]="address" class="address">
+  <div formArrayName="contact_address">
+    <ng-container *ngFor="let a of address.controls['contact_address']['controls']; let i = index">
+       contact:{{i+1}}&nbsp;<input type="text" formControlName="{{i}}"> &nbsp;
+       <button (click)="delete(i)" *ngIf="i!=0" class="remove">Remove</button><br><br>
+    </ng-container>
+
+  </div>
+</form>
+
+<button class="contact" (click)="add()" >CLICK TO ADD NEW CONTACT</button>
+
+<button (click)="product()" class="product">CLICK TO GET PRODUCTS</button>
+
+<table>
+   <tr>
+    <th>ID</th>
+    <th>CATEGORY</th>
+    <th>TITLE</th>
+    <th>PRICE</th>
+  </tr>
+   
+    <tr *ngFor="let user of users">
+      <td>{{user.id}}</td>
+      <td>{{user.category}}</td>
+      <td>{{user.title}}</td>
+      <td>{{user.price}}</td>
+    
+  </tr>
+</table>
+
+<div class="container">
+  <input type="text" [(ngModel)]="enteredText">&nbsp;
+  <button class="sub" (click)="share()">OK</button>
+</div>

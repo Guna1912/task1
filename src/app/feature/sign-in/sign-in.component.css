@@ -1,0 +1,26 @@
+.form{
+    position: absolute;
+    top: 25px;
+    /* left: 50px; */
+    width: 90%;
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 3px;
+}
+mat-form-field{
+    margin-left: 30px;
+}
+mat-dialog-actions{
+    position: absolute;
+    top: 570px;
+    left: 300px;
+}
+.close{
+    background-color: gainsboro;
+    color: black;
+    position: relative;
+    left: 340px;
+}
+.close:hover{
+    background-color: dodgerblue;
+}

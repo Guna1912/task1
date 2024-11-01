@@ -1,0 +1,33 @@
+<ul class="head" style="margin-top:-0px;">
+    
+    <li>
+        <a routerLink="" class="initial">Home {{loginstatus12}}</a>
+    </li>
+    <li>
+        <a routerLink="/courses" routerLinkActive="active" [queryParams]="{'category':'course'}">Courses</a>
+    </li>
+    <li>
+        <a routerLink="/contact" routerLinkActive="active">Contact</a>
+    </li>
+    <li *ngIf="!loginstatus">
+        <a routerLink="/login" routerLinkActive="active">Login</a>
+    </li>
+    <li>
+        <a routerLink="/register" routerLinkActive="active">Register</a>
+    </li>
+    <li>
+        <a routerLink="/react-form" routerLinkActive="active">ReactiveForm</a>
+    </li>
+    <li>
+        <a routerLink="/signUp-form" routerLinkActive="active">SignUpForm</a>
+    </li>
+    <li *ngIf="loginstatus">
+        <button (click)="logout()" >logout</button>
+    </li>
+    <li>
+        <a routerLink="/admin" routerLinkActive="active">Admin</a>
+    </li>
+    <li>
+        <a routerLink="/features" routerLinkActive="active">Features</a>
+    </li>
+</ul>

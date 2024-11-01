@@ -1,0 +1,52 @@
+<div class="demo">
+<form [formGroup]="details" >
+
+     <label> Name:</label>
+     <input type="text" formControlName="userName"  class="form-control">
+ <div>
+     <small *ngIf="details.get('userName')?.touched&&details.get('userName')?.errors?.['required'] " class="error">Please Enter UserName</small>   
+     <small *ngIf="details.get('userName')?.touched&&details.get('userName')?.errors?.['minlength'] && !details.get('userName')?.errors?.['required']" class="error">UserName have minimum 3 characters</small>
+     <small *ngIf="details.get('userName')?.touched&&details.get('userName')?.errors?.['noUpper'] && !details.get('userName')?.errors?.['required'] && !details.get('userName')?.errors?.['minlength']" class="error">UserName Must have one UpperCase</small>
+     <small *ngIf="details.get('userName')?.touched&&details.get('userName')?.errors?.['duplicateUser']"  class="error">UserName Exists</small>
+     <br>
+ </div>
+ 
+    <label>Email:</label> 
+    <input type="text" formControlName="mail"  class="form-control">
+ <div>   
+    <small *ngIf="details.get('mail')?.touched&&details.get('mail')?.errors?.['required']" class="error">Please Enter Email</small>
+    <small *ngIf="details.get('mail')?.touched&&details.get('mail')?.errors?.['pattern']" class="error">Enter valid Email</small><br>
+ </div>
+
+     <label>Password:</label> 
+    <input type="text" formControlName="password"  class="form-control">
+    <small *ngIf="details.get('password')?.touched&&details.get('password')?.errors?.['required']" class="error">Please Enter Password</small>
+    <small *ngIf="details.get('password')?.touched&&details.get('password')?.errors?.['noUpper'] && !details.get('password')?.errors?.['required']" class="error">Password Must have one UpperCase</small><br>
+
+    <div formArrayName="mobile_number">
+        <ng-container *ngFor="let mobile of details.controls['mobile_number']['controls'];let i = index">  
+            <label>Mobile{{i+1}}:</label>
+            <input type="text" formControlName="{{i}}"  class="form-control"><br>
+            <small *ngIf="details.get('mobile_number')?.touched&&details.get('mobile_number')?.errors?.['required']" class="error">Please Enter Mobile Number</small>
+
+        </ng-container>
+    </div>
+
+    <button (click)="submit()" class="submit">SUBMIT</button>
+
+</form>
+</div>
+
+<!-- 
+<button (click)="before()" class="left">Previous</button>
+<button (click)="after()" class="right">Next</button> -->
+
+<h3>Click here to get tutorials</h3>
+<button (click)="open()" class="course">Course details</button>
+
+<div class="content">
+<h1>{{inputText}}</h1>
+</div>
+
+
+<router-outlet></router-outlet>

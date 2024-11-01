@@ -1,0 +1,19 @@
+<!-- <button (click)="after()" class="right">Next</button> -->
+
+<button (click)="getProducts()" class="button">click</button>
+
+
+
+  <form [formGroup]="mobile" class="mobiles">
+    <div formArrayName="mobile_no">
+      <ng-container *ngFor="let a of mobile.controls['mobile_no']['controls']; let i = index">
+         Mobile:{{i+1}}&nbsp;<input type="text" formControlName="{{i}}"> &nbsp;
+         <button (click)="delete(i)" *ngIf="i!=0">Remove</button><br><br>
+      </ng-container>
+  
+    </div>
+  </form>
+  
+  <button class="mobile" (click)="add()">CLICK TO ADD NEW MOBILE</button>
+  
+  

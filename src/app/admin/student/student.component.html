@@ -1,0 +1,32 @@
+<h1 class="head">student component</h1>
+
+<div class="demo">
+  <form class="form">
+     <label>FIRST NAME:</label>
+     <input type="text"  name="firstname" value="guna"><br><br>
+
+     <label>LAST NAME:</label>
+     <input type="text" [(ngModel)]="lname" name="lastname"><br><br>
+
+     <label>EMAIL:</label>
+     <input type="text" #mail name="mail" value="guna@gmail.com"><br><br>
+
+     <label>MARKS:</label>
+     <input type="text" [(ngModel)]="marks" name="marks"><br><br>
+
+     <label>GRADE:</label>
+     <input type="text" [(ngModel)]="grade" name="grade">
+  </form>
+</div>
+
+<div class="todo">
+<label>TODO:</label><br>
+<input type="text" #content><br><br>
+<button (click)="addTodo(content.value)" class="add">ADD</button>
+<button (click)="delete(content.value)" class="remove">REMOVE</button>
+
+</div>
+
+<app-student-data [main]="marks" [data]="grade">
+    <!-- {{wish}} -->
+</app-student-data>

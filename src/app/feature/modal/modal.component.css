@@ -1,0 +1,25 @@
+.container{
+    position: absolute;
+    top: 50px;
+
+}
+
+.mat-raised-button{
+    position: relative;
+    left: 700px;
+}
+
+.btn{
+    position: absolute;
+    top: 10px;
+    background-color: dodgerblue;
+    padding: 15px;
+}
+
+.edit{
+    color: dodgerblue;
+}
+
+.content .filter{
+    width: 100%;
+}

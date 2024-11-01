@@ -1,0 +1,672 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "details": [
+    {
+      "id": 1,
+      "name": "aravind",
+      "date": "14/06/2002",
+      "description": "You can add width or height like this according to latest version of Angular Material."
+    },
+    {
+      "id": 2,
+      "name": "guna",
+      "date": "14/06/2002",
+      "description": "almost the same solution as above but a bit more useful if you are trying to get the object from the clicked row"
+    },
+    {
+      "id": 3,
+      "name": "suresh",
+      "date": "14/06/2002",
+      "description": "If you want to get the id from url in your component, under ngOnInit use ActivatedRoute like bellow:"
+    },
+    {
+      "id": 4,
+      "name": "ramu",
+      "date": "14/06/2002",
+      "description": "Thanks is this documented somewhere?? I would like to know the class/type of object you get back etc etc."
+    },
+    {
+      "id": 5,
+      "name": "ramu",
+      "date": "14/06/2002",
+      "description": "Thanks is this documented somewhere?? I would like to know the class/type of object you get back etc etc."
+    },
+    {
+      "id": 6,
+      "name": "ramu",
+      "date": "14/06/2002",
+      "description": "Thanks is this documented somewhere?? I would like to know the class/type of object you get back etc etc."
+    },
+    {
+      "id": 7,
+      "name": "ramu",
+      "date": "14/06/2002",
+      "description": "Thanks is this documented somewhere?? I would like to know the class/type of object you get back etc etc."
+    },
+    {
+      "id": 8,
+      "name": "ramu",
+      "date": "14/06/2002",
+      "description": "Thanks is this documented somewhere?? I would like to know the class/type of object you get back etc etc."
+    },
+    {
+      "id": 9,
+      "name": "ramu",
+      "date": "14/06/2002",
+      "description": "Thanks is this documented somewhere?? I would like to know the class/type of object you get back etc etc."
+    },
+    {
+      "id": 10,
+      "name": "ramu",
+      "date": "14/06/2002",
+      "description": "Thanks is this documented somewhere?? I would like to know the class/type of object you get back etc etc."
+    },
+    {
+      "id": 11,
+      "name": "ramu",
+      "date": "14/06/2002",
+      "description": "Thanks is this documented somewhere?? I would like to know the class/type of object you get back etc etc."
+    },
+    {
+      "id": 12,
+      "name": "ramu",
+      "date": "14/06/2002",
+      "description": "Thanks is this documented somewhere?? I would like to know the class/type of object you get back etc etc."
+    },
+    {
+      "id": 13,
+      "name": "ramu",
+      "date": "14/06/2002",
+      "description": "Thanks is this documented somewhere?? I would like to know the class/type of object you get back etc etc."
+    },
+    {
+      "id": 14,
+      "name": "ramu",
+      "date": "14/06/2002",
+      "description": "Thanks is this documented somewhere?? I would like to know the class/type of object you get back etc etc."
+    }
+  ],
+  "employee": [
+    {
+      "firstname": "aravind",
+      "lastname": "mudili",
+      "email": "abc@gmail.com",
+      "dob": "2023-08-08T18:30:00.000Z",
+      "gender": "male",
+      "education": "POST GRADUATE",
+      "country": 19,
+      "state": 818,
+      "city": "Barisal",
+      "company": "microsoft",
+      "experience": 4,
+      "package": 7,
+      "id": 2
+    },
+    {
+      "firstname": "rajesh",
+      "lastname": "kumar",
+      "email": "abc@gmail.com",
+      "dob": "2018-02-07T18:30:00.000Z",
+      "gender": "male",
+      "education": "DIPLOMA",
+      "country": 27,
+      "state": 3380,
+      "city": "Batallas",
+      "company": "google",
+      "experience": 1,
+      "package": 8,
+      "id": 3
+    },
+    {
+      "firstname": "ram",
+      "lastname": "kumar",
+      "email": "xyz@gmail.com",
+      "dob": "2023-07-31T18:30:00.000Z",
+      "gender": "male",
+      "education": "POST GRADUATE",
+      "country": 48,
+      "state": 2879,
+      "city": "Santa Rosa de Cabal",
+      "company": "google",
+      "experience": 4,
+      "package": 10,
+      "id": 4
+    },
+    {
+      "firstname": "mahesh",
+      "lastname": "kumar",
+      "email": "mahesh@gmail.com",
+      "dob": "2023-07-17T18:30:00.000Z",
+      "gender": "male",
+      "education": "GRADUATE",
+      "country": 82,
+      "state": 3014,
+      "city": "Vegesack",
+      "company": "TCS",
+      "experience": 5,
+      "package": 12,
+      "id": 5
+    },
+    {
+      "firstname": "guna",
+      "lastname": "shekar",
+      "email": "xyz@gmail.com",
+      "dob": "2023-08-02T18:30:00.000Z",
+      "gender": "male",
+      "education": "GRADUATE",
+      "country": 122,
+      "state": 3025,
+      "city": "Qacha’s Nek",
+      "company": "google",
+      "experience": 3,
+      "package": 9,
+      "id": 6
+    },
+    {
+      "firstname": "uma",
+      "lastname": "mahesh",
+      "email": "mahesh@gmail.com",
+      "dob": "2002-05-07T18:30:00.000Z",
+      "gender": "male",
+      "education": "GRADUATE",
+      "country": 81,
+      "state": 906,
+      "city": "Vale",
+      "company": "google",
+      "experience": 3,
+      "package": 5,
+      "id": 7
+    },
+    {
+      "firstname": "srinivas",
+      "lastname": "rao",
+      "email": "srinu123@gmail.com",
+      "dob": "2001-06-11T18:30:00.000Z",
+      "gender": "male",
+      "education": "GRADUATE",
+      "country": 56,
+      "state": 275,
+      "city": "Niquero",
+      "company": "tcs",
+      "experience": 1,
+      "package": 3,
+      "id": 8
+    },
+    {
+      "firstname": "dinesh",
+      "lastname": "kumar",
+      "email": "dinesh2@gmail.com",
+      "dob": "2001-02-28T18:30:00.000Z",
+      "gender": "male",
+      "education": "POST GRADUATE",
+      "country": 35,
+      "state": 3138,
+      "city": "Province de la Kossi",
+      "company": "tcs",
+      "experience": 2,
+      "package": 3,
+      "id": 9
+    },
+    {
+      "firstname": "rakesh",
+      "lastname": "allu",
+      "email": "rakesh34@gmail.com",
+      "dob": "2002-02-06T18:30:00.000Z",
+      "gender": "male",
+      "education": "GRADUATE",
+      "country": 20,
+      "state": 1230,
+      "city": "Bridgetown",
+      "company": "microsoft",
+      "experience": 3,
+      "package": 5,
+      "id": 10
+    },
+    {
+      "firstname": "ravi",
+      "lastname": "kumar",
+      "email": "ravi12345@gmail.com",
+      "dob": "2001-07-04T18:30:00.000Z",
+      "gender": "male",
+      "education": "GRADUATE",
+      "country": 100,
+      "state": 3436,
+      "city": "Borgarnes",
+      "company": "microsoft",
+      "experience": 4,
+      "package": 3,
+      "id": 11
+    },
+    {
+      "firstname": "mani",
+      "lastname": "kumar",
+      "email": "mani123@gmail.com",
+      "dob": "2001-06-04T18:30:00.000Z",
+      "gender": "male",
+      "education": "POST GRADUATE",
+      "country": 99,
+      "state": 1055,
+      "city": "Dunaszekcső",
+      "company": "google",
+      "experience": 5,
+      "package": 3,
+      "id": 12
+    }
+  ],
+  "user": [
+    {
+      "fullname": "guna",
+      "email": "shekar@gmail.com",
+      "password": "1234",
+      "phone": "8074687224",
+      "gender": "male",
+      "country": "india",
+      "state": "andhra pradesh",
+      "district": "vijayanagaram",
+      "terms&conditions": true,
+      "id": 1
+    },
+    {
+      "fullname": "aravind",
+      "email": "abc@gmail.com",
+      "password": "1234",
+      "phone": "8074687224",
+      "gender": "male",
+      "country": "india",
+      "state": "andhra pradesh",
+      "district": "vijayanagaram",
+      "terms&conditions": true,
+      "id": 2
+    },
+    {
+      "fullname": "manoj",
+      "email": "aravind@gmail.com",
+      "password": 1234,
+      "phone": 8074687224,
+      "gender": "male",
+      "country": "india",
+      "state": "andhra pradesh",
+      "district": "vishakhapatnam",
+      "terms&conditions": true,
+      "id": 3
+    },
+    {
+      "fullname": "rajesh",
+      "email": "aravind@gmail.com",
+      "password": 1234,
+      "phone": 8074687224,
+      "gender": "male",
+      "country": "india",
+      "state": "andhra pradesh",
+      "district": "vijayanagaram",
+      "terms&conditions": true,
+      "id": 4
+    },
+    {
+      "fullname": "naresh",
+      "email": "acbd@gmail.com",
+      "password": "2345",
+      "phone": "456789123",
+      "gender": "male",
+      "country": "india",
+      "state": "andhra pradesh",
+      "district": "vishakhapatnam",
+      "terms&conditions": true,
+      "id": 5
+    },
+    {
+      "fullname": "ravi",
+      "email": "ravi@gmail.com",
+      "password": "1234",
+      "phone": "456123789",
+      "gender": "female",
+      "country": "india",
+      "state": "andhra pradesh",
+      "district": "srikakulam",
+      "terms&conditions": true,
+      "id": 6
+    },
+    {
+      "fullname": "shyam",
+      "email": "1234@gmail.com",
+      "password": "123456",
+      "phone": "8978182152",
+      "gender": "male",
+      "country": "india",
+      "state": "andhra pradesh",
+      "district": "krishna",
+      "terms&conditions": true,
+      "id": 7
+    },
+    {
+      "fullname": "ramesh",
+      "email": "ram@gmail.com",
+      "password": "3748",
+      "phone": "9632587412",
+      "gender": "male",
+      "country": "india",
+      "state": "andhra pradesh",
+      "district": "guntur",
+      "terms&conditions": true,
+      "id": 8
+    },
+    {
+      "fullname": "raju",
+      "email": "raju123@gmaial.com",
+      "password": "2341",
+      "phone": "9632587418",
+      "gender": "male",
+      "country": "india",
+      "state": "andhra pradesh",
+      "district": "guntur",
+      "terms&conditions": true,
+      "id": 9
+    },
+    {
+      "fullname": "suresh",
+      "email": "123@gmail.com",
+      "password": "1234",
+      "phone": "785412698",
+      "gender": "male",
+      "country": "india",
+      "state": "andhra pradesh",
+      "district": "vishakhapatnam",
+      "terms&conditions": true,
+      "id": 10
+    },
+    {
+      "fullname": "pavan",
+      "email": "pavan@gmail.com",
+      "password": "5763",
+      "phone": "8521479632",
+      "gender": "male",
+      "country": "india",
+      "state": "andhra pradesh",
+      "district": "vishakhapatnam",
+      "terms&conditions": true,
+      "id": 11
+    }
+  ],
+  "file": [
+    {
+      "id": 1
+    },
+    {
+      "id": 2
+    },
+    {
+      "id": 3
+    },
+    {
+      "id": 4
+    },
+    {
+      "id": 5
+    },
+    {
+      "id": 6
+    },
+    {
+      "id": 7
+    },
+    {
+      "id": 8
+    },
+    {
+      "id": 9
+    },
+    {
+      "id": 10
+    },
+    {
+      "id": 11
+    },
+    {
+      "id": 12
+    },
+    {
+      "id": 13
+    },
+    {
+      "id": 14
+    },
+    {
+      "id": 15
+    },
+    {
+      "id": 16
+    },
+    {
+      "id": 17
+    },
+    {
+      "id": 18
+    },
+    {
+      "id": 19
+    },
+    {
+      "id": 20
+    },
+    {
+      "id": 21
+    },
+    {
+      "id": 22
+    },
+    {
+      "id": 23
+    },
+    {
+      "id": 24
+    },
+    {
+      "id": 25
+    },
+    {
+      "id": 26
+    },
+    {
+      "id": 27
+    },
+    {
+      "id": 28
+    },
+    {
+      "id": 29
+    },
+    {
+      "id": 30
+    },
+    {
+      "id": 31
+    },
+    {
+      "id": 32
+    },
+    {
+      "id": 33
+    },
+    {
+      "id": 34
+    },
+    {
+      "id": 35
+    },
+    {
+      "id": 36
+    },
+    {
+      "id": 37
+    },
+    {
+      "id": 38
+    },
+    {
+      "id": 39
+    },
+    {
+      "id": 40
+    },
+    {
+      "id": 41
+    },
+    {
+      "id": 42
+    },
+    {
+      "id": 43
+    },
+    {
+      "id": 44
+    },
+    {
+      "id": 45
+    },
+    {
+      "id": 46
+    },
+    {
+      "id": 47
+    },
+    {
+      "id": 48
+    },
+    {
+      "id": 49
+    },
+    {
+      "id": 50
+    },
+    {
+      "id": 51
+    },
+    {
+      "id": 52
+    },
+    {
+      "id": 53
+    },
+    {
+      "id": 54
+    },
+    {
+      "id": 55
+    },
+    {
+      "id": 56
+    },
+    {
+      "id": 57
+    },
+    {
+      "id": 58
+    },
+    {
+      "id": 59
+    },
+    {
+      "id": 60
+    },
+    {
+      "id": 61
+    },
+    {
+      "id": 62
+    },
+    {
+      "id": 63
+    },
+    {
+      "id": 64
+    },
+    {
+      "id": 65
+    },
+    {
+      "id": 66
+    },
+    {
+      "id": 67
+    },
+    {
+      "id": 68
+    },
+    {
+      "id": 69
+    },
+    {
+      "id": 70
+    },
+    {
+      "id": 71
+    },
+    {
+      "id": 72
+    },
+    {
+      "id": 73
+    },
+    {
+      "id": 74
+    },
+    {
+      "id": 75
+    },
+    {
+      "id": 76
+    },
+    {
+      "id": 77
+    },
+    {
+      "id": 78
+    },
+    {
+      "id": 79
+    },
+    {
+      "id": 80
+    },
+    {
+      "id": 81
+    },
+    {
+      "id": 82
+    },
+    {
+      "id": 83
+    },
+    {
+      "id": 84
+    },
+    {
+      "id": 85
+    },
+    {
+      "id": 86
+    },
+    {
+      "id": 87
+    },
+    {
+      "id": 88
+    }
+  ]
+}

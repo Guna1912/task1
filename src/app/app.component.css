@@ -1,0 +1,7 @@
+.title{
+    position: absolute;
+    top: 200px;
+}
+.title input{
+    padding: 9px;
+}

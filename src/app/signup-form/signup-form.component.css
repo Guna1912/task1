@@ -1,0 +1,99 @@
+
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 450px;
+    margin-top: 100px;
+    height: 700px;
+    width: 590px;
+    position: relative;
+    top: 70px;
+    border-radius: 4px;
+    box-shadow: 2px 4px 6px;
+    padding: 20px;
+    padding-bottom: 10px;
+   
+}
+
+.form input{
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 2px;
+    width: 550px;
+   
+}
+
+.form .submit{
+    color:white;
+    width: 50%;
+    background-color: darkblue;
+    padding: 9px;
+}
+
+.form .error{
+    position: absolute;
+    color: red;
+}
+
+/* .form .male{
+    position: absolute;
+    left: 200px;
+}
+.form .female{
+    position: absolute;
+    left: 200px;
+} */
+
+.form .form-check{
+    display: table;
+    clear: both;
+}
+
+.form .check{
+    display: table;
+    clear: both;
+}
+
+.form .label{
+    position: relative;
+    left: 20px;
+}
+
+.form .agree{
+    position: absolute;
+    width: 10%;
+    left: 135px;
+}
+
+input.ng-touched.ng-invalid{
+    border: 2px solid red
+}
+
+input.ng-touched.ng-valid{
+    border: 2px solid green
+}
+.form .error{
+    /* position: absolute; */
+    color: red;
+}
+.head{
+    position: absolute;
+    top: 50px;
+}
+
+.name{
+    position: absolute;
+    top: 150px;
+    background-color: whitesmoke;
+    width: 200px;
+    height: 60px;
+    padding: 20px;
+}
+.name input{
+    padding: 5px;
+}
+.name input:focus{
+    box-shadow: 2px 3px 6px;
+}
+

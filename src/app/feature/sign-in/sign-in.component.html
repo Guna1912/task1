@@ -1,0 +1,16 @@
+<mat-dialog-content>
+<form [formGroup]="form" (ngSubmit)="onSubmit(model)" class="form">
+  
+  <formly-form [fields]="fields" [model]="model"  [form]="form"></formly-form>
+  
+  <button type="submit" class="btn btn-primary" [disabled]="form.invalid" type="submit">{{ Userdata? 'Update' : 'Save'}}</button>
+
+  
+    <button mat-raised-button [mat-dialog-close]="false" class="close">Close</button>
+  
+</form>
+</mat-dialog-content>
+
+<!-- <mat-dialog-actions>
+  <button mat-button (click)="close()" class="btn">Close</button>
+</mat-dialog-actions> -->

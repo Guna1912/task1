@@ -1,0 +1,41 @@
+<!-- <button (click)="before()" class="left">Previous</button> -->
+<button (click)="emit()" class="left">SEND</button>
+
+<div class="form">
+<form ngForm="form" #login="ngForm" (ngSubmit)="data(fname,lname,total,password,login,email,phone)"  name="loginForm">
+    <div ngModelGroup #total="ngModelGroup">
+
+    <label>First Name</label>
+    <input type="text" ngModel  #fname="ngModel"  name="firstName" required minlength="3" class="form-control"> 
+    <small *ngIf="fname.touched && fname.errors?.['required']" appApply>Enter FirstName</small>
+    <small *ngIf="fname.touched && fname.errors?.['minlength']" appApply>First name contain minimum 3 characters</small><br>
+    
+        
+    <label>Last Name</label>
+    <input type="text" ngModel name="lastName" #lname="ngModel" required minlength="3" class="form-control">
+    <small *ngIf="lname.touched && lname.errors?.['required']" appApply>Enter LastName</small>
+    <small *ngIf="lname.touched && lname.errors?.['minlength']" appApply>last name contain minimum 3 characters</small><br>
+    
+
+    <label>Email</label>
+    <input type="text" ngModel name="email" #email="ngModel" required pattern="^[a-z\._\-0-9]*[@][a-z]*[\.][a-z]{3}"  class="form-control">
+    <small *ngIf="email.touched && email.errors?.['required']" appApply>Enter Email</small>
+    <small *ngIf="email.touched && email.errors?.['pattern']" appApply>Enter valid Email</small><br>
+
+    <label>Mobile Number</label>
+    <input type="text" ngModel name="phone" #phone="ngModel" required pattern="^[0-9]{10}$" class="form-control">
+    <small *ngIf="phone.touched && phone.errors?.['required']" appApply>Enter Mobile Number</small>
+    <small *ngIf="phone.touched && phone.errors?.['pattern']" appApply>Enter valid Mobile Number</small><br>
+
+  
+    <label>Password</label>
+    <input type="password" ngModel name="password" #password="ngModel" required minlength="6" class="form-control">
+    <small *ngIf="password.touched && password.errors?.['required']" appApply>Enter Password</small>
+    <small *ngIf="password.touched && password.errors?.['minlength']" appApply>Password contain minimum 6 characters</small><br>
+
+    <input type="submit" class="submit" [disabled]="login.status==='INVALID'">
+   
+    </div>
+</form>
+
+

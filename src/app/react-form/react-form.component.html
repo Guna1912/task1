@@ -1,0 +1,24 @@
+<div class="demo">
+<form [formGroup]="register">
+
+    <label>UserName</label>
+    <input type="text" formControlName="userName" [(ngModel)]="name" class="form-control">
+    <small *ngIf="getControl('userName')?.touched && getError('userName')?.['required']" class="error">Please Enter UserName</small>
+    <small *ngIf="getControl('userName')?.touched && getError('userName')?.['minlength']" class="error">UserName contain minimum 3 characters</small><br>
+    
+
+    <label>Email</label>
+    <input type="text" formControlName="email" [(ngModel)]="mail" class="form-control">
+    <small *ngIf="getControl('email')?.touched && getError('email')?.['required']" class="error">Please Enter Email</small>
+    <small *ngIf="getControl('email')?.touched && getError('email')?.['pattern']" class="error">Enter valid Email</small><br>
+    
+    <label>Phone Number</label>
+    <input type="text" formControlName="phone" [(ngModel)]="phone" class="form-control">
+    <small *ngIf="getControl('phone')?.touched && getError('phone')?.['required']" class="error">Please Enter Phone Number</small>
+    <small *ngIf="getControl('phone')?.touched && getError('phone')?.['pattern']" class="error">Enter valid Phone Number</small><br>
+
+
+    <button (click)="load()" class="submit">Submit</button>
+
+</form>
+</div>

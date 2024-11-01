@@ -1,0 +1,21 @@
+
+<div class="demo">
+
+<form>
+   
+    <label>EMAIL:</label>
+    <input type="email" [(ngModel)]="mail" [ngModelOptions]="{standalone: true}">
+    <small class="error" id="email_error">{{mail_error}}</small><br><br>
+
+
+    <label>PASSWORD:</label>
+    <input type="password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}">
+    <small class="error" id="password_error">{{password_error}}</small><br><br>
+
+    <input type="submit" class="submit" (click)="load()">
+</form>
+</div>
+<!--  
+<button (click)="before()" class="left">Previous</button>
+<button (click)="after()" class="right">Next</button> -->
+

@@ -1,0 +1,67 @@
+<!-- <ng-template *appRngif="show"> -->
+ <h1 appApply class="head" *appRngif="show">Sign Up Form</h1>
+<!-- </ng-template> -->
+
+<div class="name">
+   <label>Enter Name</label>
+   <input type="text" #enter>
+</div>
+
+<div class="form">
+    <form #signUp="ngForm" (ngSubmit)="submit(signUp)">
+        
+         <label> Full Name </label>
+         <input type="text" ngModel #fname="ngModel" name="FULLname" required minlength="4" class="form-control">
+         <div>
+            <small *ngIf="signUp.controls['fullname']?.['touched'] && signUp.controls['fullname'].errors?.['required']" appApply>Enter Name</small>
+            <small *ngIf="signUp.controls['fullname']?.['touched'] && signUp.controls['fullname'].errors?.['minlength']" appApply>Name must be minimum 4 characters</small><br>  
+        </div>
+
+         <label> Email </label>
+         <input type="text" ngModel #email="ngModel" name="mail" required pattern="^[a-z\._\-0-9]*[@][a-z]*[\.][a-z]{3}" class="form-control">
+         <div>
+            <small *ngIf="signUp.controls['mail']?.['touched'] && signUp.controls['mail'].errors?.['required']" appApply>Enter Email</small>
+            <small *ngIf="signUp.controls['mail']?.['touched'] && signUp.controls['mail'].errors?.['pattern']" appApply>Enter valid Email</small><br>
+         </div>
+
+         <label> Phone Number</label>
+         <input type="text" ngModel #mobile="ngModel" name="phone_number"   class="form-control">
+         <div>
+            <small></small><br>
+         </div>
+
+         <label> Password </label>
+         <input type="password" ngModel #password="ngModel" name="password" required minlength="8" class="form-control">
+         <div>
+            <small *ngIf="signUp.controls['password']?.['touched'] && signUp.controls['password'].errors?.['required']" appApply>Enter Password</small>
+            <small *ngIf="signUp.controls['password']?.['touched'] && signUp.controls['password'].errors?.['minlength']" appApply>Password must have minimum 8 characters</small><br>
+         </div>
+
+         <label> Confirm Password </label>
+         <input type="password" ngModel #Cpassword="ngModel" name="Cpassword" required class="form-control">
+         <div>
+            <small *ngIf="signUp.controls['Cpassword']?.['touched'] && signUp.controls['Cpassword']?.errors?.['required']" appApply>Please re-enter password</small>
+            <small *ngIf="signUp.controls['Cpassword']?.['touched'] && signUp.controls['password']?.['value'] != signUp.controls['Cpassword']?.['value'] && !signUp.controls['Cpassword']?.errors?.['required']" appApply>Re-enter the correct password</small><br>
+         </div>
+      
+         <label>Gender:</label><br>
+        
+         <div class="form-check">
+         <label class="form-check-label">Male</label>
+         <input type="radio" ngModel name="gender" #gender="ngModel" value="male" required>
+         <label class="form-check-label">Female</label>
+         <input type="radio" ngModel name="gender" #gender="ngModel" value="female" required>
+         </div>
+         <div>
+            <small *ngIf="signUp.controls['gender']?.['touched'] && signUp.controls['gender'].invalid" appApply>Plase select Gender</small>
+         </div><br>
+
+         <div class="check">
+            <label class="checkbox-inline">Agree Terms & Conditions</label>
+         <input type="checkbox" ngModel name="agree" class="agree" required>
+         </div>
+         <small *ngIf="signUp.controls['agree']?.['touched'] && signUp.controls['agree']?.invalid" appApply>Agree terms & conditions</small><br>   
+
+         <button class="submit" [disabled]="signUp.status==='INVALID'" >Submit</button>     
+    </form>
+</div>

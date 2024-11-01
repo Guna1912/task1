@@ -1,0 +1,47 @@
+
+.demo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 450px;
+    margin-top: 100px;
+    height: 600px;
+    width: 500px;
+    position: relative;
+    top: 70px;
+    border-radius: 4px;
+    box-shadow: 2px 3px 6px ;
+    padding: 20px;
+    padding-bottom: 10px;
+   
+}
+
+.demo input{
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 2px;
+    width: 300px;
+
+}
+
+
+.demo .submit{
+    color:white;
+    width: 50%;
+    background-color: darkblue;
+    padding: 10px;
+}
+
+
+.demo .error{
+    position: absolute;
+    color: red;
+}
+
+input.ng-touched.ng-invalid{
+    border: 2px solid red;
+}
+
+input.ng-touched.ng-valid{
+    border: 2px solid green;
+}
